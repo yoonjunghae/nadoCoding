@@ -21,13 +21,14 @@ public class _01_Generics {
 
 
     }
-    //T : Type K : Key V : value  E : Element
+    //T : Type K : Key V : value  E : Element  <> 다이아몬드 기호
     private static <T> void printAnyArray(T[] array){
         for(T t : array){
             System.out.print(t + " ");
         }
         System.out.println();
-
+        // 중복적으로 코드 정의할 필요 없이 T하나만 가지고 처리 할 수 있음
+        // 제네릭스를 쓰면 불필요한 코드 중복을 막을 수 있음.
     }
 
     private static void printStringArray(String[] sArray) {
@@ -45,7 +46,7 @@ public class _01_Generics {
         
     }
 
-    private static void printIntArray(Integer[] iArray) {
+    private static void printIntArray(Integer[] iArray) {//웨퍼클래스
        for(int i : iArray){
            System.out.print(i + " ");
        }
